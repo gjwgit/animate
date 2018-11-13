@@ -23,13 +23,13 @@ library(gganimate)
 library(ggflags)
 })
 
-# Examples from the gganimate package.
+# TODO Examples from the gganimate package.
 
 cat("\nPress Enter to continue on to a sports analytics example: ")
 invisible(readChar("stdin", 1))
 
-# This example is based on Victor Yu's example as posted to Twitter
-# 2018-11-09,
+# This example is based on Victor Yu's very nice example as posted to
+# Twitter 2018-11-09,
 # https://twitter.com/VictorYuEpi/status/1061012677907091457, and
 # Victor later shared the code at
 # https://twitter.com/VictorYuEpi/status/1061681783920619521.
@@ -39,8 +39,8 @@ cat("
 Sports Analytics
 ================
 
-This animation is based on code shared by Victor Yu 9 November 2018 on Twitter.
-See the README for details. A credit to Victor for sharing this.
+This animation is based on code shared by Victor Yu on Twitter, 9 November 2018.
+See the README for details. Credit to Victor for sharing this great example.
 ")
 
 suppressMessages(rio_df <- read_csv("iaaf.csv"))
@@ -54,13 +54,13 @@ ds <- rio_df
 # the animation will burst from Rank 1. However I'm doing this for a
 # lot of subsets so I made it an automated process.
 #
-# Victor says re from the second mutate: Below is credit of Jon
-# Spring, who answers a lot of gganimate questions on stack. This
-# method takes inspiration from his answer here:
+# Victor says about the second mutate: Below is credit of Jon Spring,
+# who answers a lot of gganimate questions on stack. This method takes
+# inspiration from his answer here:
 # https://stackoverflow.com/questions/53092216/
 # any-way-to-pause-at-specific-frames-time-points-with-transition-reveal-in-gganim
 #
-# Victor syas re the second mutate: the rhs number of the mutate is
+# Victor syas about the second mutate: the rhs number of the mutate is
 # the 'ratio' or quantity of frames to create. I say ratio as the
 # number of frames is technically determined by the fps/nframes
 # arguments in animate()
@@ -80,7 +80,7 @@ ds %<>%
   mutate(reveal_time = row_number()) %>%
   ungroup()
 
-# Victor says: Create reference vectors for convenience.
+# Victor: Create reference vectors for convenience.
 
 ds %>%
   select(Athlete) %>%
@@ -93,7 +93,7 @@ events_vector_ordered_v2 <- c("Start", "100m", "Long Jump", "Shotput",
                               "Discus Throw", "Pole Vault",
                               "Javelin Throw", "1500m")
 
-# The plot.
+# Build the plot.
 
 ds %>%
   ggplot(aes(event, rank, group=Athlete)) +
@@ -162,8 +162,12 @@ my_anim
 # this with nframes = 100 first to check you're happy with the font
 # layout/formatting/sizing before generating the full animation. In my
 # full animation I set nframes=800.
+#
+# The use of type="cairo-png" fails on DSVM for some reason.
+#
+# tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600, type="cairo-png")
 
-tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600, type="cairo-png")
+tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600)
 
 fname <- "animate.gif"
 anim_save(fname)
@@ -171,7 +175,8 @@ system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
 Close the graphic window using Ctrl-W.
-Press Enter to continue on to view with a pre-computed (large) image with more frames: ")
+Press Enter to continue on to view a pre-computed (large) image with
+more frames that will be smoother (at least on local machines): ")
 invisible(readChar("stdin", 1))
 
 # Consider adding this next 37MB file to the cache store on MLHub.ai
@@ -181,7 +186,7 @@ system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
 This next animated gif will take longer to load, since it is quite a bit
-larger. It was generated with 800 frames rather than 100 above. The end
+larger. It was generated with 800 frames rather than the 100 above. The end
 result is a much smoother animation.
 
 Press Enter to finish the demonstration: ")
