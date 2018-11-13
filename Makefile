@@ -14,6 +14,8 @@ MODEL_FILES = 				\
 	iaaf.R				\
 	iaaf.csv			\
 	animate_800.gif			\
+	gganimate.tar.gz		\
+	ggflags.tar.gz			\
 
 # Include standard Makefile templates.
 
