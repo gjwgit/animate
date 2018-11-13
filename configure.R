@@ -12,7 +12,7 @@ system("sudo apt-get install -y cargo", ignore.stderr=TRUE, ignore.stdout=TRUE)
 
 # Identify the required R packages for this model.
 
-packages <- c("tidyverse", "RColorBrewer", "remotes", "devtools")
+packages <- c("tidyverse", "RColorBrewer", "devtools")
 
 # Determine which packages need to be installed.
 
@@ -42,13 +42,34 @@ if (length(install))
   cat(sprintf("\n\nInstalling '%s' into '%s'...", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
 }
-cat("\n")
+cat("\n\n")
 
-cat("We also need to install these package from github...\n")
-
-pkgs <- c("thomasp85/gganimate", "ellisp/ggflags")
-for (pkg in pkgs)
+if (TRUE)
 {
-  cat(" ", dirname(pkg), "'s ", basename(pkg), " package\n", sep="")
-  suppressMessages(devtools::install_github(pkg, lib=lib))
+  cat("We also need to install these specific package versions...\n")
+
+  # This is because on the DSVM R is a little out of date.
+  
+  pkgs <- c("https://cran.r-project.org/src/contrib/gifski_0.8.6.tar.gz",
+            "https://cran.r-project.org/src/contrib/farver_1.0.tar.gz",
+            "https://cran.r-project.org/src/contrib/tweenr_1.0.0.tar.gz",
+            "gganimate.tar.gz",
+            "ggflags.tar.gz")
+  for (pkg in pkgs)
+  {
+    cat("", basename(pkg), "\n")
+    install.packages(pkg, repos=NULL, lib=lib)
+  }
+}
+
+if (FALSE) # Could not get this to work on DLVM? So download and install tar.gz.
+{
+  cat("We also need to install these updated packages from github...\n")
+
+  pkgs <- c("thomasp85/gganimate", "ellisp/ggflags")
+  for (pkg in pkgs)
+  {
+    cat(" ", dirname(pkg), "'s ", basename(pkg), " package\n", sep="")
+    devtools::install_github(pkg, lib=lib)
+  }
 }
