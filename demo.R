@@ -187,7 +187,7 @@ system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 cat("
 This next animated gif will take longer to load, since it is quite a bit
 larger. It was generated with 800 frames rather than the 100 above. The end
-result is a much smoother animation.
+result is a much smoother animation (when run on a local machine).
 
 Press Enter to finish the demonstration: ")
 invisible(readChar("stdin", 1))
