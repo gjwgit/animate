@@ -8,7 +8,7 @@
 # Install OS required pacakgeds
 
 cat("Install system dependencies if needed (please wait as some can take a while)...\n cargo, atril\n\n")
-system("sudo apt-get install -y cargo atril", ignore.stderr=TRUE, ignore.stdout=TRUE)
+system("sudo apt-get install -y cargo atril ")
 
 # Identify the required R packages for this model.
 
@@ -39,7 +39,7 @@ dir.create(lib, showWarnings=FALSE, recursive=TRUE)
 
 if (length(install))
 {
-  cat(sprintf("\n\nInstalling '%s' into '%s'...", paste(install, collapse="', '"), lib))
+  cat(sprintf("Installing '%s' into '%s'...", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
 }
 cat("\n\n")
