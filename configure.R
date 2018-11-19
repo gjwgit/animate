@@ -7,7 +7,7 @@
 
 # Install OS required pacakgeds
 
-install <- c("atril", "cargo")
+install <- c("atril", "cargo", "libcurl4-openssl-dev", "libssl-dev")
 already <- NULL
 for (p in install)
 {
@@ -29,7 +29,7 @@ if (length(install))
 
 # Identify the required R packages for this model.
 
-packages <- c("tidyverse", "RColorBrewer", "devtools")
+packages <- c("progress", "png", "tidyverse", "RColorBrewer", "devtools")
 
 # Determine which packages need to be installed.
 
