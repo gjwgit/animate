@@ -7,8 +7,25 @@
 
 # Install OS required pacakgeds
 
-cat("Install system dependencies if needed (please wait as some can take a while)...\n cargo, atril\n\n")
-system("sudo apt-get install -y cargo atril ")
+install <- c("atril", "cargo")
+already <- NULL
+for (p in install)
+{
+  if (system(paste("dpkg -s", p), ignore.stdout=TRUE, ignore.stderr=TRUE) == 0)
+    already <- c(already, p)
+}
+install <- setdiff(install, already)
+if (length(already))
+{
+  cat("The following required system packages are already installed:\n ",
+      paste(already, collapse=" "), "\n\n")
+}
+if (length(install))
+{
+  cat("Installing the following system dependencies:\n ", paste(install, collapse=" "), "\n\n")
+  system(paste("sudo apt-get install --yes", paste(install, collapse=" ")),
+         ignore.stdout=TRUE, ignore.stderr=TRUE)
+}
 
 # Identify the required R packages for this model.
 
@@ -24,7 +41,7 @@ already <- setdiff(packages, install)
 if (length(already))
 {
     cat("The following required R packages are already installed:\n",
-        paste(already, collapse=" "))
+        paste(already, collapse=" "), "\n\n")
 }
 
 # Install into the package local R library.
@@ -41,12 +58,12 @@ if (length(install))
 {
   cat(sprintf("Installing '%s' into '%s'...", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
+  cat("\n\n")
 }
-cat("\n\n")
 
 if (TRUE)
 {
-  cat("We also need to install these specific package versions...\n")
+  cat("We also need to install these specific packages...\n")
 
   # This is because on the DSVM R is a little out of date.
   
