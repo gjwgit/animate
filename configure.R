@@ -7,7 +7,7 @@
 
 # Install OS required pacakgeds
 
-install <- c("atril", "cargo", "libcurl4-openssl-dev", "libssl-dev")
+install <- c("atril", "cargo", "libcurl4-openssl-dev", "libssl-dev", "libxml2-dev", "libgit2-dev")
 already <- NULL
 for (p in install)
 {
@@ -56,9 +56,9 @@ dir.create(lib, showWarnings=FALSE, recursive=TRUE)
 
 if (length(install))
 {
-  cat(sprintf("Installing '%s' into '%s'...", paste(install, collapse="', '"), lib))
+  cat(sprintf("Installing '%s' into '%s'...\n", paste(install, collapse="', '"), lib))
   install.packages(install, lib=lib)
-  cat("\n\n")
+  cat("\n")
 }
 
 if (TRUE)
