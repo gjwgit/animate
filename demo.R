@@ -41,6 +41,7 @@ Sports Analytics
 
 This animation is based on code shared by Victor Yu on Twitter, 9 November 2018.
 See the README for details. Credit to Victor for sharing this great example.
+Please wait whilst we generate the animation.
 ")
 
 suppressMessages(rio_df <- read_csv("iaaf.csv"))
@@ -169,25 +170,25 @@ my_anim
 
 tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600)
 
+cat("
+Close the graphic window (Ctrl-w) to continue on to a pre-computed (large)
+image with more frames that will be smoother (at least on local machines).
+")
+
 fname <- "animate.gif"
 anim_save(fname)
-system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
-
-cat("
-Close the graphic window using Ctrl-W.
-Press Enter to continue on to view a pre-computed (large) image with
-more frames that will be smoother (at least on local machines): ")
-invisible(readChar("stdin", 1))
+system(paste("eom", fname), ignore.stderr=TRUE, wait=TRUE)
 
 # Consider adding this next 37MB file to the cache store on MLHub.ai
-
-fname <- "animate_800.gif"
-system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
 This next animated gif will take longer to load, since it is quite a bit
 larger. It was generated with 800 frames rather than the 100 above. The end
 result is a much smoother animation (when run on a local machine).
 
-Press Enter to finish the demonstration: ")
-invisible(readChar("stdin", 1))
+Close the graphic window (Ctrl-w) to finish.
+")
+
+fname <- "animate_800.gif"
+system(paste("eom", fname), ignore.stderr=TRUE, wait=TRUE)
+
