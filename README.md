@@ -14,3 +14,18 @@ The data comes from the
 
 Animations are best run on your local server rather than from the
 cloud where the experience will be quite jarring.
+
+Visit the github repository for more details:
+<https://github.com/gjwgit/animate>
+
+Usage
+-----
+
+To install and run the pre-built model:
+
+    $ pip install mlhub
+    $ ml install animate
+    $ ml readme animate
+    $ ml configure animate
+    $ ml commands animate
+    $ ml demo animate
