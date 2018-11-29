@@ -5,9 +5,9 @@
 # access from within mlhub. R itself is often operating system
 # installed though not necessarily.
 
-# Install OS required pacakgeds
+# Identify missing OS required packages
 
-install <- c("atril", "cargo", "libcurl4-openssl-dev", "libssl-dev", "libxml2-dev", "libgit2-dev")
+install <- c("eom", "cargo")#, "libcurl4-openssl-dev", "libssl-dev", "libxml2-dev", "libgit2-dev")
 already <- NULL
 for (p in install)
 {
@@ -22,9 +22,9 @@ if (length(already))
 }
 if (length(install))
 {
-  cat("Installing the following system dependencies:\n ", paste(install, collapse=" "), "\n\n")
-  system(paste("sudo apt-get install --yes", paste(install, collapse=" ")),
-         ignore.stdout=TRUE, ignore.stderr=TRUE)
+  cat("Please ask an administrator to install the following system dependencies:\n ",
+      paste(install, collapse=" "), "\n\n")
+  stop("Configuration can not continue at this time.")
 }
 
 # Identify the required R packages for this model.
@@ -68,7 +68,7 @@ if (TRUE)
   # This is because on the DSVM R is a little out of date.
   
   pkgs <- c("https://cran.r-project.org/src/contrib/gifski_0.8.6.tar.gz",
-            "https://cran.r-project.org/src/contrib/farver_1.0.tar.gz",
+            "https://cran.r-project.org/src/contrib/farver_1.1.0.tar.gz",
             "https://cran.r-project.org/src/contrib/tweenr_1.0.0.tar.gz",
             "gganimate.tar.gz",
             "ggflags.tar.gz")
