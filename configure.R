@@ -5,9 +5,10 @@
 # access from within mlhub. R itself is often operating system
 # installed though not necessarily.
 
-# Identify missing OS required packages
+########################################################################
+# Identify missing OS required packages.
 
-install <- c("eom", "cargo")#, "libcurl4-openssl-dev", "libssl-dev", "libxml2-dev", "libgit2-dev")
+install <- c("eom", "cargo")
 already <- NULL
 for (p in install)
 {
@@ -22,11 +23,12 @@ if (length(already))
 }
 if (length(install))
 {
-  cat("Please ask an administrator to install the following system dependencies:\n ",
+  cat("Please ask your sys admin to install the following system dependencies:\n ",
       paste(install, collapse=" "), "\n\n")
   stop("Configuration can not continue at this time.")
 }
 
+########################################################################
 # Identify the required R packages for this model.
 
 packages <- c("progress", "png", "tidyverse", "RColorBrewer", "devtools")
@@ -61,6 +63,9 @@ if (length(install))
   cat("\n")
 }
 
+########################################################################
+# Specific extensions by URL
+
 if (TRUE)
 {
   cat("We also need to install these specific packages...\n")
@@ -78,6 +83,9 @@ if (TRUE)
     install.packages(pkg, repos=NULL, lib=lib)
   }
 }
+
+########################################################################
+# Github extensions
 
 if (FALSE) # Could not get this to work on DLVM? So download and install tar.gz.
 {
