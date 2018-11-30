@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot
-  version      : 1.0.7
+  version      : 1.0.8
   languages    : R
   modeller     : gganimate
   type         : plot
@@ -12,10 +12,9 @@ meta:
   author       : Vincent Yu
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/animate
-  filename     : pool/main/a/animate/animate_1.0.7.mlm
 dependencies:
-  ubuntu: atril, cargo, libcurl4-openssl-dev, libssl-dev
-  CRAN: progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
+  os: atril, cargo
+  cran: progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
   github: thomasp85/gganimate, ellisp/ggflags
 commands:
   demo    : Step through a series of animation demos.
