@@ -1,0 +1,20 @@
+meta:
+  name         : animate
+  title        : Tell a data narative through animations
+  keywords     : r, animation, plot
+  version      : 2.0.0
+  languages    : R
+  modeller     : gganimate
+  type         : plot
+  display      : demo
+  license      : gpl3
+  author       : Vincent Yu
+  maintainer   : Graham.Williams@togaware.com
+  url          : https://github.com/gjwgit/animate
+dependencies:
+  os: eom, cargo
+  cran: progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
+  github: thomasp85/gganimate, ellisp/ggflags
+  files: animate_800.gif
+commands:
+  demo    : Step through a series of animation demos.
