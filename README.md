@@ -23,7 +23,7 @@ Usage
 
 To install and run the pre-built model:
 
-    $ pip install mlhub
+    $ pip3 install mlhub
     $ ml install animate
     $ ml readme animate
     $ ml configure animate
