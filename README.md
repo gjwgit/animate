@@ -24,8 +24,8 @@ Usage
 To install and run the pre-built model:
 
     $ pip3 install mlhub
-    $ ml install animate
-    $ ml readme animate
+    $ ml install   animate
+    $ ml readme    animate
     $ ml configure animate
-    $ ml commands animate
-    $ ml demo animate
+    $ ml commands  animate
+    $ ml demo      animate
