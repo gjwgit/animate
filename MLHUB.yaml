@@ -12,9 +12,9 @@ meta:
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/animate
 dependencies:
-  system: eom, cargo
-  cran: progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
-  github: thomasp85/gganimate, ellisp/ggflags
-  files: animate_800.gif
+  system : eom, cargo
+  cran   : progress, png, tidyverse, RColorBrewer, gifski, farver, tweenr
+  github : thomasp85/gganimate, ellisp/ggflags
+  files  : animate_800.gif
 commands:
-  demo    : Step through a series of animation demos.
+  demo   : Step through a series of animation demos.
