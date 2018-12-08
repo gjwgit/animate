@@ -171,16 +171,27 @@ my_anim
 
 tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600)
 
+cat("
+Close the graphic window using Ctrl-w.
+Press Enter to continue on to view a smoother animation: ")
+invisible(readChar("stdin", 1))
+
 fname <- "animate.gif"
 anim_save(fname)
 system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
-Press Enter to continue on to view a pre-computed (large) image with
-more frames that will be smoother. This pre-built animated gif will
-take longer to load, since it is quite a bit larger. It was generated
-with 800 frames rather than the 100 above. The end result is a much
-smoother animation (at least on local machines): ")
+=================================
+More Frames => Smoother Animation
+=================================
+
+This pre-built (large) image with more frames will generally deliver a
+better experience. The animated gif will take longer to load, since it
+is quite a bit larger. It was generated with 800 frames rather than the
+100 above. The end result is a much smoother animation (at least on local
+machines).
+
+Press Enter to display the animation: ")
 invisible(readChar("stdin", 1))
 
 # TODO Consider adding this 37MB file to the cache store on MLHub.ai
@@ -189,6 +200,7 @@ fname <- "animate_800.gif"
 system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
-Press Enter to finish: ")
+Type Ctrl-w to close the animation window.
+Press Enter to finish this demonstration: ")
 invisible(readChar("stdin", 1))
 
