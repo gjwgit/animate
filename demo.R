@@ -172,13 +172,17 @@ my_anim
 tmp <- animate(my_anim, nframes=100, fps=25, width=1200, height=600)
 
 cat("
-Close the graphic window using Ctrl-w.
-Press Enter to continue on to view a smoother animation: ")
+Press Enter to view the generated animation: ")
 invisible(readChar("stdin", 1))
 
 fname <- "animate.gif"
 anim_save(fname)
 system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
+
+cat("
+Close the graphic window using Ctrl-w.
+Press Enter to continue on to view a smoother animation: ")
+invisible(readChar("stdin", 1))
 
 cat("
 =================================
@@ -200,7 +204,7 @@ fname <- "animate_800.gif"
 system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
 
 cat("
-Type Ctrl-w to close the animation window.
+Close the graphic window using Ctrl-w.
 Press Enter to finish this demonstration: ")
 invisible(readChar("stdin", 1))
 
