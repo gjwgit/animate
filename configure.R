@@ -23,9 +23,10 @@ if (length(already))
 }
 if (length(install))
 {
-  cat("Please ask your sys admin to install the following system dependencies:\n ",
-      paste(install, collapse=" "), "\n\n")
-  stop("Configuration can not continue at this time.")
+
+  cat("Installing the following system dependencies:\n ", paste(install, collapse=" "), "\n\n")
+  system(paste("sudo apt-get install --yes", paste(install, collapse=" ")),
+         ignore.stdout=TRUE, ignore.stderr=TRUE)
 }
 
 ########################################################################
