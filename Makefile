@@ -6,16 +6,16 @@
 
 # List the files to be included in the .mlm package.
 
-MODEL_FILES = 				\
-	configure.R 			\
-	demo.R 				\
-	README.txt			\
-	DESCRIPTION.yaml		\
-	iaaf.R				\
-	iaaf.csv			\
-	animate_800.gif			\
-	gganimate.tar.gz		\
-	ggflags.tar.gz			\
+MODEL_FILES = 			\
+	configure.R 		\
+	demo.R 			\
+	README.txt		\
+	MLHUB.yaml		\
+	iaaf.R			\
+	iaaf.csv		\
+	animate_800.gif		\
+	gganimate.tar.gz	\
+	ggflags.tar.gz		\
 
 # Include standard Makefile templates.
 
@@ -34,6 +34,5 @@ clean::
 	rm -f 	README.txt
 
 realclean:: clean
-	rm -f 	$(MODEL)_*.mlm			\
-		$(MODEL).gif		 	\
-		iaaf.csv		 	\
+	rm -f 	$(MODEL)_*.mlm	\
+		$(MODEL).gif	\
