@@ -3,13 +3,13 @@ Animate
 
 Animations can add considerable insight into the data we are
 exploring. In this [MLHub](https://mlhub.ai) package we illustrate
-animations created form our data.
+animations created from our data.
 
 The sports animation is based on Victor Yu's example code posted to
 [Twitter](https://twitter.com/VictorYuEpi/status/1061012677907091457)
 with the code shared also on
 [Twitter](https://twitter.com/VictorYuEpi/status/1061681783920619521).
-The data comes from the International Association of Atheletics
+The data come from the International Association of Atheletics
 Federations [IAAF](https://www.iaaf.org/results/olympic-games/2016/the-xxxi-olympic-games-5771/men/decathlon/1500-metres/points).
 
 Animations are best run on your local server rather than from the
