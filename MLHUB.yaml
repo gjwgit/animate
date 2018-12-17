@@ -17,7 +17,7 @@ dependencies:
   system:
     - eom
     - cargo
-  cran:
+  mran-2018-12-17:
     - progress
     - png
     - tidyverse
