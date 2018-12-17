@@ -73,9 +73,9 @@ if (TRUE)
 
   # This is because on the DSVM R is a little out of date.
   
-  pkgs <- c("https://cran.r-project.org/src/contrib/gifski_0.8.6.tar.gz",
-            "https://cran.r-project.org/src/contrib/farver_1.1.0.tar.gz",
-            "https://cran.r-project.org/src/contrib/tweenr_1.0.1.tar.gz",
+  pkgs <- c("https://cran.microsoft.com/snapshot/2018-12-01/src/contrib/gifski_0.8.6.tar.gz",
+            "https://cran.microsoft.com/snapshot/2018-12-01/src/contrib/farver_1.1.0.tar.gz",
+            "https://cran.microsoft.com/snapshot/2018-12-01/src/contrib/tweenr_1.0.0.tar.gz",
             "gganimate.tar.gz",
             "ggflags.tar.gz")
   for (pkg in pkgs)
