@@ -29,7 +29,7 @@ dependencies:
   github:
     - thomasp85/gganimate
     - ellisp/ggflags
-files:
-  - animate_800.gif
+#files:
+#  - animate_800.gif
 commands:
   demo : Step through a series of animation demos.
