@@ -177,7 +177,10 @@ invisible(readChar("stdin", 1))
 
 fname <- "animate.gif"
 anim_save(fname)
-system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
+if (Sys.getenv("DISPLAY") != "")
+{
+  system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
+}
 
 cat("
 Close the graphic window using Ctrl-w.
@@ -200,8 +203,11 @@ invisible(readChar("stdin", 1))
 
 # TODO Consider adding this 37MB file to the cache store on MLHub.ai
 
-fname <- "animate_800.gif"
-system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
+if (Sys.getenv("DISPLAY") != "")
+{
+  fname <- "animate_800.gif"
+  system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
+}
 
 cat("
 Close the graphic window using Ctrl-w.
