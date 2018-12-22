@@ -17,6 +17,9 @@ dependencies:
   system:
     - eom
     - cargo
+    - libcurl4-openssl-dev
+    - libssl-dev
+    - libgit2-dev
   cran:
     - progress
     - png
@@ -29,7 +32,11 @@ dependencies:
     - gganimate
   github:
     - ellisp/ggflags
-#files:
-#  - animate_800.gif
+  files:
+    - animate_800.gif
+    - demo.R
+    - iaaf.csv
+    - iaaf.R
+    - README.md
 commands:
   demo : Step through a series of animation demos.
