@@ -26,12 +26,9 @@ dependencies:
     - tidyverse
     - RColorBrewer
     - gifski=0.8.6
-  cran-2018-12-01:
-    - farver
-    - tweenr
-    - gganimate
   github:
     - ellisp/ggflags
+    - thomasp85/gganimate
   files:
     - animate_800.gif
     - demo.R
