@@ -12,7 +12,6 @@ meta:
   author       : Vincent Yu
   maintainer   : Graham.Williams@togaware.com
   url          : https://github.com/gjwgit/animate
-  filename     : pool/main/a/animate/animate_1.0.8.mlm
 dependencies:
   system:
     - eom
@@ -26,6 +25,9 @@ dependencies:
     - tidyverse
     - RColorBrewer
     - gifski=0.8.6
+  cran-2018-12-01:
+    - farver
+    - tweenr
   github:
     - ellisp/ggflags
     - thomasp85/gganimate
