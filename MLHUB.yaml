@@ -16,9 +16,6 @@ dependencies:
   system:
     - eom
     - cargo
-    - libcurl4-openssl-dev
-    - libssl-dev
-    - libgit2-dev
   cran:
     - progress
     - png
