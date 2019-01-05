@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot
-  version      : 2.0.1
+  version      : 2.0.2
   languages    : R
   modeller     : gganimate
   type         : plot
@@ -26,11 +26,12 @@ dependencies:
     - farver
     - tweenr
   github:
+    - gganimate.tar.gz # Snapshot local copy original from github
     - ellisp/ggflags
-    - thomasp85/gganimate
   files:
     - animate_800.gif
     - demo.R
+    - gganimate.tar.gz
     - iaaf.csv
     - iaaf.R
     - README.md
