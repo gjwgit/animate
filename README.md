@@ -1,19 +1,19 @@
 Animate
 =======
 
-Animations can add considerable insight into the data we are
-exploring. In this [MLHub](https://mlhub.ai) package we illustrate
-animations created from our data.
+Animations can add considerable insight to any data analysis and
+communicate quite effectively the story that the data is telling. This
+[MLHub](https://mlhub.ai) package illustrates animations that
+demonstrate the effectiveness of dynamic visual communications.
 
-The sports animation is based on Victor Yu's example code posted to
+The sports animation used here is based on Victor Yu's example code
+posted to
 [Twitter](https://twitter.com/VictorYuEpi/status/1061012677907091457)
 with the code shared also on
 [Twitter](https://twitter.com/VictorYuEpi/status/1061681783920619521).
-The data come from the International Association of Atheletics
-Federations [IAAF](https://www.iaaf.org/results/olympic-games/2016/the-xxxi-olympic-games-5771/men/decathlon/1500-metres/points).
-
-Animations are best run on your local server rather than from the
-cloud where the experience will be quite jarring.
+The data come from the International Association of Athletics
+Federations
+[IAAF](https://www.iaaf.org/results/olympic-games/2016/the-xxxi-olympic-games-5771/men/decathlon/1500-metres/points).
 
 Visit the github repository for more details:
 <https://github.com/gjwgit/animate>
@@ -21,19 +21,27 @@ Visit the github repository for more details:
 Usage
 -----
 
-To install and run the pre-built model:
+* To install mlhub (e.g., Ubuntu 18.04 LTS)
 
-    $ pip3 install mlhub
-    $ ml install   animate
-    $ ml readme    animate
-    $ ml configure animate
-    $ ml commands  animate
-    $ ml demo      animate
+```console
+$ pip3 install mlhub
+```
+
+* To install and configure the pre-built model:
+
+```console
+$ ml install   animate
+$ ml readme    animate
+$ ml configure animate
+$ ml commands  animate
+$ ml demo      animate
+```
 
 Demonstration
 -------------
 
 ```console
+$ ml demo animate
 =================
 Animated Graphics
 =================
