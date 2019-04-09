@@ -56,7 +56,10 @@ Frame 100 (100%)
 Finalizing encoding... done!
 
 Press Enter to view the generated animation: 
+```
+![](animate_100.gif)
 
+```console
 Close the graphic window using Ctrl-w.
 Press Enter to continue on to view a smoother animation: 
 
