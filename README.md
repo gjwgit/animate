@@ -21,21 +21,18 @@ Visit the github repository for more details:
 Usage
 -----
 
-* To install mlhub (e.g., Ubuntu 18.04 LTS)
+* To install mlhub:
 
-```console
-$ pip3 install mlhub
-```
+	```console
+	$ pip3 install mlhub
+	```
 
 * To install and configure the pre-built model:
 
-```console
-$ ml install   animate
-$ ml readme    animate
-$ ml configure animate
-$ ml commands  animate
-$ ml demo      animate
-```
+	```console
+	$ ml install   animate
+	$ ml configure animate
+	```
 
 Demonstration
 -------------
