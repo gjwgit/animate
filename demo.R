@@ -4,30 +4,27 @@
 # See https://github.com/thomasp85/gganimate
 #
 
-cat("=================
-Animated Graphics
-=================
+library(mlhub)
 
-We illustrate the use of animations to add more interest and insight
+mlcat("Animated Graphics",
+"We illustrate the use of animations to add more interest and insight
 to the graphics we can produce in R. This adds to the narrative that
 we are telling through the data and is a fundamental tool for the
-Data Scientist to communicate that narrative.
-")
+Data Scientist to communicate that narrative.")
 
 # Load required packages.
 
 suppressMessages(
 {
-library(tidyverse)
-library(RColorBrewer)
-library(gganimate)
-library(ggflags)
+  library(tidyverse)
+  library(RColorBrewer)
+  library(gganimate)
+  library(ggflags)
 })
 
 # TODO Examples from the gganimate package.
 
-cat("\nPress Enter to continue on to a sports analytics example: ")
-invisible(readChar("stdin", 1))
+mlask()
 
 # This example is based on Victor Yu's very nice example as posted to
 # Twitter 2018-11-09,
@@ -35,12 +32,8 @@ invisible(readChar("stdin", 1))
 # Victor later shared the code at
 # https://twitter.com/VictorYuEpi/status/1061681783920619521.
 
-cat("
-================
-Sports Analytics
-================
-
-This animation is based on code shared by Victor Yu on Twitter, 9 November 2018.
+mlcat("Sports Analytics",
+"This animation is based on code shared by Victor Yu on Twitter, 9 November 2018.
 See the README on github for details. Credit to Victor for sharing this great
 example. Please wait whilst we generate 100 frames for the animation.
 ")
