@@ -34,8 +34,8 @@ mlask()
 
 mlcat("Sports Analytics",
 "This animation is based on code shared by Victor Yu on Twitter, 9 November 2018.
-See the README on github for details. Credit to Victor for sharing this great
-example. Please wait whilst we generate 100 frames for the animation.
+See the README on github for details. Please wait whilst we generate 100 frames
+for the animation.
 ")
 
 suppressMessages(rio_df <- read_csv("iaaf.csv"))
