@@ -1,7 +1,6 @@
-Animate
-=======
+# Animate
 
-Animations can add considerable insight to any data analysis and
+Animations can add considerable insight to any data analysis and can
 communicate quite effectively the story that the data is telling. This
 [MLHub](https://mlhub.ai) package illustrates animations that
 demonstrate the effectiveness of dynamic visual communications.
@@ -18,24 +17,28 @@ Federations
 Visit the github repository for more details:
 <https://github.com/gjwgit/animate>
 
-Usage
------
+## Quick Start Command Line Examples
 
-* To install mlhub:
+```console
+$ ml demo animate
+```
 
-	```console
-	$ pip3 install mlhub
-	```
+## Usage
 
-* To install and configure the pre-built model:
+- To install mlhub (Ubuntu)
+
+```console
+$ pip3 install mlhub
+```
+
+- To install and configure the pre-built model:
 
 	```console
 	$ ml install   animate
 	$ ml configure animate
 	```
 
-Demonstration
--------------
+## Demonstration
 
 ```console
 $ ml demo animate
