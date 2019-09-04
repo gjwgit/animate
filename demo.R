@@ -147,7 +147,8 @@ ds %>%
   scale_color_manual(values=colorRampPalette(brewer.pal(11, "Spectral"))(n_athletes),
                      guide=FALSE) + 
 
-  transition_reveal(Athlete, reveal_time) ->
+#  transition_reveal(Athlete, ds$reveal_time) ->
+  transition_reveal(reveal_time) ->
 
 my_anim
 
