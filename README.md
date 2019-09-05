@@ -1,4 +1,4 @@
-# Visualising Data Through Animations
+# Visualise Data Through Animations
 
 Animations can add considerable insight to any data analysis and can
 communicate quite effectively the story that the data is telling. This
@@ -33,10 +33,10 @@ $ pip3 install mlhub
 
 - To install and configure the pre-built model:
 
-	```console
-	$ ml install   animate
-	$ ml configure animate
-	```
+```console
+$ ml install   animate
+$ ml configure animate
+```
 
 ## Demonstration
 
