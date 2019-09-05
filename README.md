@@ -1,4 +1,4 @@
-# Animate
+# Visualising Data Through Animations
 
 Animations can add considerable insight to any data analysis and can
 communicate quite effectively the story that the data is telling. This
