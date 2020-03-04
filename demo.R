@@ -206,6 +206,5 @@ if (Sys.getenv("DISPLAY") != "")
 cat("
 Close the graphic window using Ctrl-w.
 
-Press Enter to finish this demonstration: ")
-invisible(readChar("stdin", 1))
+")
 
