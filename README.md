@@ -6,13 +6,9 @@ communicate quite effectively the story that the data is telling. This
 demonstrate the effectiveness of dynamic visual communications.
 
 The sports animation used here is based on Victor Yu's example code
-posted to
-[Twitter](https://twitter.com/VictorYuEpi/status/1061012677907091457)
-with the code shared also on
-[Twitter](https://twitter.com/VictorYuEpi/status/1061681783920619521).
-The data come from the International Association of Athletics
-Federations
-[IAAF](https://www.iaaf.org/results/olympic-games/2016/the-xxxi-olympic-games-5771/men/decathlon/1500-metres/points).
+posted to Twitter with data from the International Association of
+Athletics Federations
+([IAAF](https://www.iaaf.org/results/olympic-games/2016/the-xxxi-olympic-games-5771/men/decathlon/1500-metres/points)).
 
 Visit the github repository for more details:
 <https://github.com/gjwgit/animate>
@@ -31,11 +27,14 @@ $ ml demo animate
 $ pip3 install mlhub
 ```
 
-- To install and configure the pre-built model:
+- To install, configure, and run the demo:
 
 ```console
 $ ml install   animate
 $ ml configure animate
+$ ml readme    animate
+$ ml commands  animate
+$ ml demo      animate
 ```
 
 ## Demonstration
