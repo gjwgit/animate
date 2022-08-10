@@ -3,7 +3,7 @@ meta:
   name         : animate
   title        : Tell a data narative through animations
   keywords     : r, animation, plot, sports, line chart, athletics
-  version      : 2.1.5
+  version      : 2.1.6
   languages    : R
   modeller     : gganimate
   type         : plot
