@@ -14,7 +14,6 @@ meta:
   url          : https://github.com/gjwgit/animate
 dependencies:
   system:
-    - eom
     - cargo
   cran:
     - progress
