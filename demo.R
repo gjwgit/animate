@@ -190,6 +190,8 @@ invisible(readChar("stdin", 1))
 # TODO Consider adding this 37MB file to the cache store on MLHub.ai
 
 mlpreview("animate_800.gif",
-          msg="Please wait for the animation display. Close it using Ctrl-w. Then press Enter to exit.",
+          msg="Please wait for the animation display.
+Close it using Ctrl-w.
+Then press Enter to exit.",
           end="")
 mlask("", end="")
