@@ -170,16 +170,8 @@ invisible(readChar("stdin", 1))
 
 fname <- "animate.gif"
 anim_save(fname)
-if (Sys.getenv("DISPLAY") != "")
-{
-  system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
-}
-
-cat("
-Close the graphic window using Ctrl-w.
-
-Press Enter to continue on to view a smoother animation: ")
-invisible(readChar("stdin", 1))
+mlpreview(fname)
+mlask("Press Enter to continue on to view a smoother animation: ")
 
 cat("
 =================================
@@ -197,14 +189,7 @@ invisible(readChar("stdin", 1))
 
 # TODO Consider adding this 37MB file to the cache store on MLHub.ai
 
-if (Sys.getenv("DISPLAY") != "")
-{
-  fname <- "animate_800.gif"
-  system(paste("eom", fname), ignore.stderr=TRUE, wait=FALSE)
-}
+mlpreview("animate_800.gif",
+          msg="Please wait for the animation display. Close it using Ctrl-w.")
 
-cat("
-Close the graphic window using Ctrl-w.
-
-")
-
+mlask()
